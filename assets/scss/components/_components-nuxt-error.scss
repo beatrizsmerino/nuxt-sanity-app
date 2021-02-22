@@ -1,0 +1,60 @@
+// COMPONENTS
+// NUXT ERROR
+// =================================================
+
+.__nuxt-error-page {
+	width: 100%;
+	padding: 4rem 0;
+	position: relative;
+	font-size: 1.6rem;
+	background-color: $color-error;
+
+	.error {
+		width: 100%;
+		padding: 0 5%;
+	}
+
+	svg {
+		path {
+			fill: mix($color-white, $color-error, 30%) !important;
+		}
+	}
+
+	a {
+		color: mix($color-white, $color-error, 60%) !important;
+		font-weight: bold;
+
+		&:hover {
+			color: $color-white !important;
+		}
+	}
+
+	.title {
+		font-size: 3rem;
+		color: $color-white;
+	}
+
+	.description {
+		font-size: 2rem;
+		color: $color-white;
+	}
+
+	.logo {
+		margin-top: 3rem;
+		position: relative;
+		left: inherit;
+		bottom: inherit;
+
+		a {
+			padding: 1rem 2rem;
+			color: $color-white !important;
+			border-radius: 0.5rem;
+			border: 0.2rem solid $color-white;
+			background-color: $color-brand-1 !important;
+
+			&:hover {
+				color: $color-brand-3 !important;
+			}
+		}
+	}
+}
