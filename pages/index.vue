@@ -5,22 +5,38 @@
 			<h1 class="title">
 				nuxt-sanity-app
 			</h1>
-			<div class="links">
+			<div class="subtitle">
+				<p>
+					App development with nuxt.js and sanitity.io
+				</p>
+			</div>
+			<div class="button__list">
+				<a
+					href="https://www.sanity.io/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="button button--dark"
+				>
+					Documentation<br>
+					SANITY.IO
+				</a>
 				<a
 					href="https://nuxtjs.org/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="button--green"
+					class="button button--dark"
 				>
-					Documentation
+					Documentation<br>
+					NUXT.JS
 				</a>
 				<a
 					href="https://github.com/nuxt/nuxt.js"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="button--grey"
+					class="button button--black"
 				>
-					GitHub
+					GitHub<br>
+					NUXT.JS
 				</a>
 			</div>
 		</div>
@@ -31,9 +47,10 @@
 	export default {};
 </script>
 
-<style>
+<style lang="scss">
 	.container {
 		margin: 0 auto;
+		padding: 1rem 5%;
 		min-height: 100vh;
 		display: flex;
 		justify-content: center;
@@ -42,25 +59,21 @@
 	}
 
 	.title {
-		font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-			BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-			sans-serif;
-		display: block;
-		font-weight: 300;
-		font-size: 100px;
-		color: #35495e;
-		letter-spacing: 1px;
+		margin-bottom: 2rem;
+		font-family: $font-brand-1;
+		font-weight: 400;
+		font-size: 7rem;
+		color: $color-brand-4;
+
+		@include media('md') {
+			font-size: 5rem;
+		}
 	}
 
 	.subtitle {
+		font-family: $font-brand-2;
 		font-weight: 300;
-		font-size: 42px;
-		color: #526488;
-		word-spacing: 5px;
-		padding-bottom: 15px;
-	}
-
-	.links {
-		padding-top: 15px;
+		font-size: 3rem;
+		color: $color-light;
 	}
 </style>
