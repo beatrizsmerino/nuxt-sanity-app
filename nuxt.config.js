@@ -50,7 +50,24 @@ export default {
 	modules: [
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
-		'@nuxtjs/style-resources'
+		'@nuxtjs/style-resources',
+		[
+			'nuxt-svg-sprite-module',
+			{
+				directory: '~/assets/images/icons',
+
+				/*
+				 * Optional template location: defaults to __dirname + /app.html
+				 *     templateLocation: "src/app.html",
+				 */
+				options: {
+					/*
+					 * Configuration options:
+					 * https://github.com/jkphl/svg-sprite#configuration-basics
+					 */
+				}
+			}
+		]
 	],
 
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
