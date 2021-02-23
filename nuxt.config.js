@@ -2,6 +2,14 @@ export default {
 	// Target (https://go.nuxtjs.dev/config-target)
 	target: 'static',
 
+	dev: process.env.NODE_ENV !== 'production',
+
+	// ENV (https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-env)
+	env: {
+		baseUrl:
+			process.env.BASE_URL || 'https://nuxt-sanity-app.000webhostapp.com/'
+	},
+
 	// Global page headers (https://go.nuxtjs.dev/config-head)
 	head: {
 		title: 'nuxt-sanity-app',
@@ -74,5 +82,7 @@ export default {
 	axios: {},
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
-	build: {}
+	build: {
+		publicPath: `https://nuxt-sanity-app.000webhostapp.com/`
+	}
 }
