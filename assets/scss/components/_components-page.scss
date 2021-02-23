@@ -1,0 +1,48 @@
+// COMPONENTS
+// PAGE
+// =================================================
+
+.page {
+	&__container {
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&__inner {
+		padding-right: 3rem;
+		padding-left: 3rem;
+
+		@include media('sm') {
+			padding-right: 2rem;
+			padding-left: 2rem;
+		}
+	}
+}
+
+.page-main {
+	font-size: 2rem;
+	line-height: 140%;
+}
+
+.page-title {
+	line-height: 100%;
+	font-size: 6rem;
+	font-weight: 700;
+	color: $color-white;
+}
+
+.page-section {
+	padding-top: 6.5rem;
+	padding-bottom: 6.5rem;
+
+	&__title {
+		margin-bottom: 3rem;
+		font-size: 4rem;
+		color: $color-brand-1;
+	}
+
+	&__content {
+	}
+}
