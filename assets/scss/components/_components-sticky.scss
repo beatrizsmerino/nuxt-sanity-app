@@ -1,0 +1,23 @@
+// COMPONENTS
+// STICKY
+// =================================================
+
+html {
+	.sticky {
+		&__layout {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__header {
+			position: sticky;
+			top: 0;
+			z-index: 999999;
+		}
+
+		&__main {
+			flex: 1;
+		}
+	}
+}

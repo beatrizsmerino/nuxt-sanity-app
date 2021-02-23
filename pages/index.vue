@@ -1,63 +1,141 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">nuxt-sanity-app</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+	<section class="page-section page__inner">
+		<div class="page-section__content page__container">
+			<Logo class="logo" />
+			<h1 class="title">
+				nuxt-sanity-app
+			</h1>
+			<div class="subtitle">
+				<p>
+					App development with nuxt.js and sanitity.io
+				</p>
+			</div>
+			<div class="list">
+				<Button
+					href="https://www.sanity.io/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="button button--dark"
+				>
+					Documentation<br>
+					SANITY.IO
+				</Button>
+				<Button
+					href="https://nuxtjs.org/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="button button--dark"
+				>
+					Documentation<br>
+					NUXT.JS
+				</Button>
+				<Button
+					href="https://github.com/nuxt/nuxt.js"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="button button--black"
+				>
+					GitHub<br>
+					NUXT.JS
+				</Button>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script>
-export default {}
+	import Button from '@/components/Button';
+
+	export default {
+		components: {
+			Button
+		}
+	};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss">
+	.page-index {
+		.page-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+		.page-section {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+			&__content {
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+			}
+		}
 
-.links {
-  padding-top: 15px;
-}
+		.logo {
+			width: 24.5rem;
+			height: 18rem;
+			margin: 0 auto 4rem;
+		}
+
+		.title {
+			margin-bottom: 2rem;
+			font-family: $font-brand-1;
+			font-weight: 400;
+			line-height: 100%;
+			font-size: 7rem;
+			color: $color-brand-4;
+
+			@include media('md') {
+				font-size: 5rem;
+			}
+		}
+
+		.subtitle {
+			font-family: $font-brand-2;
+			font-weight: 300;
+			line-height: 100%;
+			font-size: 3rem;
+			color: $color-light;
+		}
+
+		.list {
+			width: 100%;
+			margin-top: 4rem;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+
+			@include media('md') {
+				flex-direction: column;
+			}
+
+			/deep/ {
+				.button {
+					@include media('md') {
+						width: 40rem;
+					}
+
+					@include media('sm') {
+						width: 90%;
+					}
+
+					&:not(:last-child) {
+						margin-right: 2rem;
+
+						@include media('md') {
+							margin-right: 0;
+							margin-bottom: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
 </style>
